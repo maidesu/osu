@@ -21,7 +21,7 @@ namespace osu.Game.Rulesets.Osu.Mods
     public class OsuModSliderIndicator : Mod, IApplicableToBeatmap, IApplicableToDrawableHitObject
     {
         public override string Name => "Slider Indicator";
-        public override string Acronym => "SI";
+        public override string Acronym => "SL";
         public override ModType Type => ModType.Fun;
         public override LocalisableString Description => "Never get slow-slidered again.";
         public override double ScoreMultiplier => 1;
