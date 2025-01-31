@@ -16,7 +16,8 @@ namespace osu.Game.Rulesets.Osu.Skinning.Legacy
     public partial class LegacyCursorTrail : CursorTrail
     {
         private readonly ISkin skin;
-        private const double disjoint_trail_time_separation = 1000 / 60.0;
+        //private const double disjoint_trail_time_separation = 1000 / 60.0;
+        private const double disjoint_trail_time_separation = 0;
 
         public bool DisjointTrail { get; private set; }
         private double lastTrailTime;
@@ -63,12 +64,14 @@ namespace osu.Game.Rulesets.Osu.Skinning.Legacy
             }
         }
 
-        protected override double FadeDuration => DisjointTrail ? 150 : 500;
+        //protected override double FadeDuration => DisjointTrail ? 150 : 500;
+        protected override double FadeDuration => 120;
         protected override float FadeExponent => 1;
 
-        protected override bool InterpolateMovements => !DisjointTrail;
+        protected override bool InterpolateMovements => true;
 
-        protected override float IntervalMultiplier => 1 / Math.Max(cursorSize.Value, 1);
+        //protected override float IntervalMultiplier => 1 / Math.Max(cursorSize.Value, 1);
+        protected override float IntervalMultiplier => .1f;
         protected override bool AvoidDrawingNearCursor => !DisjointTrail;
 
         protected override void Update()

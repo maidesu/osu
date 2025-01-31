@@ -27,7 +27,7 @@ namespace osu.Game.Rulesets.Osu.UI.Cursor
     [DrawVisualiserHidden]
     public partial class CursorTrail : Drawable, IRequireHighFrequencyMousePosition
     {
-        private const int max_sprites = 2048;
+        private const int max_sprites = 8192;
 
         /// <summary>
         /// An exponentiating factor to ease the trail fade.
